@@ -48,25 +48,43 @@ console.log(crazyDiff(78))
 */
 
 function boundary(n){
-    const result =  (n >= 20 && n <= 100 && n === 400)? true : false
-    return result
+    // const result =  (n >= 20 && n <= 100 && n === 400)? true : false
+    // return result
+    if (n >= 20 && n <= 100){
+        return true}
+    else if (n === 400){
+        return true
+    }
+    else {
+        return false
+    }
 }
-console.log(boundary(401))
+console.log(boundary(400))
 
 /* EXERCISE 5
  Write a function called "strivify" which accepts a string as a parameter.
  It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
 
-/* WRITE YOUR ANSWER HERE */
+function strivify(input1){
+    let first = input1.split(' ')[0]
+    if (first === "Strive"){
+        return input1
+    }
+    else if (first != "Strive"){
+        return "Strive" + " " + input1
+    }
+}
+console.log(strivify("is cool"))
 
 /* EXERCISE 6
  Write a function called "check3and7" which accepts a positive number as a parameter and checks if it is a multiple of 3 or a multiple of 7.
  HINT: Modulus Operator
 */
 
-/* WRITE YOUR ANSWER HERE */
+function check3and7(num){
 
+}
 /* EXERCISE 7
  Write a function called "reverseString" which programmatically reverses a given string (es.: Strive => evirtS).
 */
@@ -77,13 +95,21 @@ console.log(boundary(401))
  Write a function called "upperFirst" which capitalizes the first letter of each word of a given string passed as a parameter.
 */
 
-/* WRITE YOUR ANSWER HERE */
+function upperFirst(input2){
+    let sentence = input2.split(" ")
+    for (let i = 0; i < sentence.length; i++) {
+        sentence[i] = sentence[i].charAt(0).toUpperCase() + sentence[i].slice(1)
+    
+    }
+    return sentence.join(" ");
+}    
+console.log(upperFirst("i'm an idiot, i was just writing a sentence to the console not calling the bloody function"))
 
 /* EXERCISE 9
  Write a function called "cutString" which creates a new string without the first and last character of a given string passed as a parameter.
 */
 
-/* WRITE YOUR ANSWER HERE */
+function cutString
 
 /* EXERCISE 10
  Write a function called "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
