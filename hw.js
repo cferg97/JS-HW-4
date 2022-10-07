@@ -89,8 +89,14 @@ function check3and7(num){
  Write a function called "reverseString" which programmatically reverses a given string (es.: Strive => evirtS).
 */
 
-/* WRITE YOUR ANSWER HERE */
-
+function reverseString(m){
+    let str = ""
+    for (let i = m.length - 1; i >=0; i--){
+        str += m[i]
+    }
+    return str
+}
+console.log(reverseString("hello"))
 /* EXERCISE 8
  Write a function called "upperFirst" which capitalizes the first letter of each word of a given string passed as a parameter.
 */
@@ -109,14 +115,21 @@ console.log(upperFirst("i'm an idiot, i was just writing a sentence to the conso
  Write a function called "cutString" which creates a new string without the first and last character of a given string passed as a parameter.
 */
 
-function cutString
+function cutString(initial){
+    const finish = initial.slice(1, -1);
+    return finish
+}
+console.log(cutString("This is a string"))
 
 /* EXERCISE 10
  Write a function called "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
 
-/* WRITE YOUR ANSWER HERE */
-
+function giveMeRandom(n){
+    let arr1 = Array.from({length: n}, () => Math.floor(Math.random() * 10))
+    return arr1
+}
+console.log(giveMeRandom(27))
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
 */
